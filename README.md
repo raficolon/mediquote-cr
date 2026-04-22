@@ -1,2 +1,3 @@
-# mediquote-cr
-Repository for mediquote cr app
+/** @type {import('next').NextConfig} */
+const nextConfig = {}
+module.exports = nextConfig
