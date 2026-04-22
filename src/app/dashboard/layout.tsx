@@ -1,16 +1,10 @@
 import { getProfile, getNotificaciones } from '@/lib/db'
 import { redirect } from 'next/navigation'
 import TopBar from '@/components/layout/TopBar'
-import { createClient } from '@/lib/supabase/server'
 
 export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
-  const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) redirect('/auth/login')
-
   const profile = await getProfile()
   if (!profile) redirect('/auth/login')
-
   const notifs = await getNotificaciones()
   const unread = notifs.filter(n => !n.leida).length
 

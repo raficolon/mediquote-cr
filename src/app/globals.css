@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --teal-50:  #E1F5EE;
+  --teal-400: #1D9E75;
+  --teal-600: #0F6E56;
+  --teal-800: #085041;
+  --blue-50:  #E6F1FB;
+  --blue-400: #378ADD;
+  --blue-600: #185FA5;
+  --blue-800: #0C447C;
+  --amber-50: #FAEEDA;
+  --amber-600: #633806;
+  --red-50:   #FCEBEB;
+  --red-600:  #A32D2D;
+  --green-50: #EAF3DE;
+  --green-800: #27500A;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg border text-sm font-medium transition-all;
+  }
+  .btn-primary {
+    @apply bg-teal-600 border-teal-600 text-white hover:bg-teal-700;
+  }
+  .btn-secondary {
+    @apply bg-white border-gray-200 text-gray-700 hover:bg-gray-50;
+  }
+  .btn-danger {
+    @apply bg-white border-red-300 text-red-700 hover:bg-red-50;
+  }
+  .btn-blue {
+    @apply bg-blue-600 border-blue-600 text-white hover:bg-blue-700;
+  }
+
+  .card {
+    @apply bg-white border border-gray-100 rounded-xl p-5;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  .badge-new    { @apply bg-blue-50 text-blue-800; }
+  .badge-pending { @apply bg-amber-50 text-amber-800; }
+  .badge-quoted  { @apply bg-teal-50 text-teal-800; }
+  .badge-accepted { @apply bg-green-50 text-green-800; }
+  .badge-rejected { @apply bg-red-50 text-red-800; }
+
+  .input {
+    @apply w-full px-3 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent;
+  }
+  .label {
+    @apply block text-xs text-gray-500 mb-1.5;
+  }
+
+  .section-title {
+    @apply text-xs font-medium text-gray-400 uppercase tracking-wider mb-3;
+  }
+
+  .list-row {
+    @apply flex items-center justify-between px-5 py-4 border-b border-gray-50 cursor-pointer hover:bg-gray-50 transition-colors last:border-0;
+  }
+}

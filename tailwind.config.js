@@ -1,27 +1,16 @@
-{
-  "name": "mediquote-cr",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+  theme: {
+    extend: {
+      colors: {
+        teal: {
+          50: '#E1F5EE', 100: '#9FE1CB', 200: '#5DCAA5',
+          400: '#1D9E75', 500: '#1D9E75', 600: '#0F6E56',
+          700: '#0F6E56', 800: '#085041', 900: '#04342C',
+        },
+      },
+    },
   },
-  "dependencies": {
-    "next": "^14.2.0",
-    "react": "^18.3.0",
-    "react-dom": "^18.3.0",
-    "@supabase/ssr": "^0.4.0",
-    "@supabase/supabase-js": "^2.43.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.4",
-    "typescript": "^5"
-  }
+  plugins: [],
 }
